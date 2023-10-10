@@ -11,7 +11,17 @@ An array of student objects
 See sample classroom object in samples.js
 */
 
-function createClassroom(subject, teacher, tas, students) {}
+function createClassroom(subject, teacher, tas, students) {
+    if(!subject || !teacher || !tas || !students) {//or something like students === undefined 
+        return -1;
+    }
+
+
+    return {
+        tas: tas,
+        students: students
+    };
+}
 
 /* TODO
 getClassInfo will return a template literal
